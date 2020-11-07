@@ -73,7 +73,12 @@ $(document).ready(function(){
 // *******************INPUT VALIDATION*********************
 
 function validate1(){
-  if(localStorage.getItem("blocker")==null)
+  if(localStorage.getItem("blocker")!=null){
+    //alert("You have already tried");
+    document.getElementById('one').style.display = "block";
+    flag = 1;
+  }
+  else
   {
     localStorage.setItem("blocker", "true");
     var input1 = document.getElementById('answer1').value;
@@ -88,14 +93,15 @@ function validate1(){
       flag = 1;
     }
   }
-  else{
+  
+}
+function validate2(){
+  if(localStorage.getItem("blocker")!=null){
     //alert("You have already tried");
     document.getElementById('one').style.display = "block";
     flag = 1;
   }
-}
-function validate2(){
-  if(localStorage.getItem("blocker")==null)
+  else
   {
     localStorage.setItem("blocker", "true");
     var input2 = document.getElementById('answer2').value;
@@ -110,14 +116,15 @@ function validate2(){
       flag = 1;
     }
   }
-  else{
+  
+}
+function validate3(){
+  if(localStorage.getItem("blocker")!=null){
     //alert("You have already tried");
     document.getElementById('one').style.display = "block";
     flag = 1;
-  }
-}
-function validate3(){
-  if(localStorage.getItem("blocker")==null)
+  } 
+  else
   {
     localStorage.setItem("blocker", "true");
     var input3 = document.getElementById('answer3').value;
@@ -132,14 +139,15 @@ function validate3(){
       flag = 1;
     }
   }
-  else{
+  
+}
+function validate4(){
+  if(localStorage.getItem("blocker")!=null){
     //alert("You have already tried");
     document.getElementById('one').style.display = "block";
     flag = 1;
   } 
-}
-function validate4(){
-  if(localStorage.getItem("blocker")==null)
+  else
   {
     localStorage.setItem("blocker", "true");
     var input4 = document.getElementById('answer4').value;
@@ -154,11 +162,7 @@ function validate4(){
       flag = 1;
     }
   }
-  else{
-    //alert("You have already tried");
-    document.getElementById('one').style.display = "block";
-    flag = 1;
-  } 
+  
 }
 
 
