@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Wizards Unite</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="level2.css">
+  <link rel="shortcut icon" href="https://www.innerve-igdtuw.com/innerve_logo.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+</head>
+<body>
+
+  <div class="heading">
+    
+    <h1>LEVEL : 2</h1>
+    <h2>Crack & Solve &#x21AF;</h2>  
+    
+  </div>
+
+ <!--  **************AUDIO****************** -->
+
+ <audio id="myAudio">
+   <source src="egg-crack.wav" type="audio/wav">
+ </audio>
+
+  <!-- ***********************EGGS********************** -->
+  <div class="EGGS">
+
+    <!-- **************egg1****************** -->
+
+  	<div class="egg1">
+      <div class="egg1__left ">
+        <img src="https://i.imgur.com/5Zi8ZoQ.png" alt="">
+      </div><!-- /left-->  
+      
+      <div class="egg1__right  ">
+        <img src="https://i.imgur.com/o3oib7h.png" alt="">
+      </div><!-- right-->
+      
+      <div class="egg1__prize">
+      </div><!-- /prize -->
+    </div>
+
+    <!-- **************egg2****************** -->
+
+    <div class="egg2">
+      <div class="egg2__left ">
+        <img src="https://i.imgur.com/5Zi8ZoQ.png" alt="">
+      </div><!-- /left-->  
+      
+      <div class="egg2__right  ">
+        <img src="https://i.imgur.com/o3oib7h.png" alt="">
+      </div><!-- right-->
+      
+      <div class="egg2__prize">
+      </div><!-- /prize -->
+    </div>
+
+    <!-- **************egg3****************** -->
+
+    <div class="egg3">
+      <div class="egg3__left ">
+        <img src="https://i.imgur.com/5Zi8ZoQ.png" alt="">
+      </div><!-- /left-->  
+      
+      <div class="egg3__right  ">
+        <img src="https://i.imgur.com/o3oib7h.png" alt="">
+      </div><!-- right-->
+      
+      <div class="egg3__prize">
+      </div><!-- /prize -->
+    </div>
+
+    <!-- **************egg4****************** -->
+
+    <div class="egg4">
+      <div class="egg4__left ">
+        <img src="https://i.imgur.com/5Zi8ZoQ.png" alt="">
+      </div><!-- /left-->  
+      
+      <div class="egg4__right  ">
+        <img src="https://i.imgur.com/o3oib7h.png" alt="">
+      </div><!-- right-->
+      
+      <div class="egg4__prize">
+      </div><!-- /prize -->
+    </div>
+
+  </div>
+
+  <!-- ***********************RIDDLES************************** -->
+
+  <div class="RIDDLES">
+
+  <!-- ***************riddle1********************* -->
+
+    <div class="riddle1">
+      <img src="scroll.png">
+      <div class="paratext">
+        <span id="timer1"></span>
+        <p><strong>What charm did Professor McGonagall <br> use to bring the statues and suits of <br> armour to life in Deathly Hallows?</strong></p>
+        <input type="text" name="answer" id="answer1" placeholder="Answer" required>
+        <button onclick="validate1()">SUBMIT</button>
+      </div>
+    </div>
+
+    <!-- ***************riddle2********************* -->
+
+    <div class="riddle2">
+      <img src="scroll.png">
+      <div class="paratext">
+        <span id="timer2"></span>
+        <p><strong>What spell is used to conjure <br> the Dark Mark?</strong></p>
+        <input type="text" name="answer" id="answer2" placeholder="Answer" required>
+        <button onclick="validate2()">SUBMIT</button>
+      </div>
+    </div>
+
+    <!-- ***************riddle3********************* -->
+
+    <div class="riddle3">
+      <img src="scroll.png">
+      <div class="paratext">
+        <span id="timer3"></span>
+        <p><strong>What type of spell is <br> Levicorpus?</strong></p>
+        <input type="text" name="answer" id="answer3" placeholder="Answer" required>
+        <button onclick="validate3()">SUBMIT</button>
+      </div>
+    </div>
+
+    <!-- ***************riddle4********************* -->
+
+    <div class="riddle4">
+      <img src="scroll.png">
+      <div class="paratext">
+        <span id="timer4"></span>
+        <p><strong>In the philosopher’s stone which spell  is used<br> on Neville when he tries to stop Harry, Hermione <br>and Ron from leaving the common room at night?</strong></p>
+        <input type="text" name="answer" id="answer4" placeholder="Answer" required>
+        <button onclick="validate4()">SUBMIT</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- *************POPUPS******************** -->
+
+  <div class="popup-cor" id="cor">
+    <h2>Correct!</h2>
+    <p>Well Done!<br><strong>CLUE:</strong> This is your clue.<br>Kindly click the below button to solve a coding question.</p>
+    <a href="https://www.hackerrank.com/dummy-contest-2-1"><button class="link1">Click Here</button></a>
+  </div>
+  <div class="popup-wro" id="wro">
+    <h2>Incorrect!</h2>
+    <p>Unfortunately, you won't get a clue.<br>Kindly click the below button to solve a coding question.</p><br>
+    <a href="https://www.hackerrank.com/dummy-contest-2-1"><button class="link2">Click Here</button></a>
+  </div>
+  <div class="popup-time" id="time">
+    <h2>Time's up!</h2>
+    <p>Unfortunately, you ran out of time.<br>Kindly click the below button to solve a coding question.</p><br>
+    <a href="https://www.hackerrank.com/dummy-contest-2-1"><button class="link3">Click Here</button></a>
+  </div>
+  <div class="popup-one" id="one">
+        <h2>You've already attempted!</h2>
+        <p>Kindly click the below button to solve a coding question.</p><br>
+        <a href="https://www.hackerrank.com/dummy-contest-4-1"><button class="link3">Click Here</button></a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="level2.js"></script>
+  
+
+</body>
+</html>

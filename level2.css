@@ -1,0 +1,277 @@
+body{
+  background: url(https://www.starburstmagazine.com/wp-content/uploads/2019/05/293bf3289bed412f94a9fafc6d8d05c6.gif)  no-repeat center center fixed;
+  background-size: cover;
+}
+
+/*********************HEADING**************************/
+
+.heading{
+  background-color: rgba(255,165,0,0.4);
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+}
+
+/***************************EGGS**************************/
+
+.egg1, .egg2, .egg3, .egg4 {
+  width: 175px;
+  height: 200px;
+  position: absolute;
+  margin-top: 260px;
+  -webkit-animation: goyang 2s infinite ease-in;
+  -webkit-animation-direction: alternate ease-in;
+  animation: goyang 2s infinite;
+}
+.egg1 {
+  margin-left: 50px;
+}
+.egg2 {
+  margin-left: 350px;
+}
+.egg3 {
+  margin-left: 650px;
+}
+.egg4 {
+  margin-left: 950px;
+}
+
+
+.egg1.hover1, .egg2.hover2, .egg3.hover3,  {
+  -webkit-animation: rpdCrack ease 0.5s;
+  animation: rpdCrack 0.5s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  width: 200px;
+}
+
+
+.egg1 img, .egg2 img, .egg3 img, .egg4 img {
+  width: 100px;
+  height: 200px;
+}
+.egg1__left, .egg2__left, .egg3__left, .egg4__left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.egg1__left.hover1, .egg2__left.hover2, .egg3__left.hover3, .egg4__left.hover4 {
+  -webkit-animation: leftCrack 1s ease;
+  animation: leftCrack 1s ease;
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.egg1__right, .egg2__right, .egg3__right, .egg4__right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.egg1__right.hover1, .egg2__right.hover2, .egg3__right.hover3, .egg4__right.hover4 {
+  -webkit-animation: rightCrack 1s ease;
+  animation: rightCrack 1s ease;
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes leftCrack {
+  0% {
+    -webkit-transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+  80% {
+    -webkit-transform: rotate(-92deg);
+    top: 30%;
+    left: -60%;
+  }
+  90% {
+    -webkit-transform: rotate(-88deg);
+  }
+  100% {
+    -webkit-transform: rotate(-90deg);
+    top: 30%;
+    left: -60%;
+  }
+}
+
+@-webkit-keyframes leftCrack {}
+@keyframes rightCrack {
+  0% {
+    -webkit-transform: rotate(0deg);
+    top: 0;
+    right: 0;
+  }
+  60% {
+    -webkit-transform: rotate(90deg);
+    top: 30%;
+    right: -60%;
+  }
+  80% {
+    -webkit-transform: rotate(89deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    top: 30%;
+    right: -60%;
+  }
+}
+
+
+/*****************************RIDDLES*************************/
+
+
+img{
+  width: 700px;
+  height: 400px;
+  margin: 30px auto auto auto;
+  position: relative;
+}
+.riddle1, .riddle2, .riddle3, .riddle4{
+  position: relative;
+  text-align: center;
+  display: none;
+}
+.paratext{
+  position: relative;
+  font-size: 1.6vw;
+  top: 50%;
+  left: 52%;
+  transform: translate(-52%, -240%);
+}
+
+.paratext span{
+  color: red;
+  text-align: center;
+  position: relative;
+  font-size: 2rem;
+}
+
+button {
+  color: #fff;
+  background-color: #000;
+}
+
+.popup-cor, .popup-wro, .popup-time, .popup-one {
+  background: rgba(100,100,100,0.5);
+  position: fixed;
+  display: none;
+  z-index: 5000;
+  width: 500px;
+  height: 300px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 60%;
+  background: #000;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  border: 5px solid rgba(255,165,0,0.8);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+}
+
+.link1, .link2, .link3{
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+}
+.link1{background-color: green;}
+.link2{background-color: red;}
+.link3{background-color: rgba(255,165,0,0.8);}
+
+
+/********************MEDIA QUERIES*********************/
+
+@media(max-width: 768px){
+  .nav-item{
+    text-align: center!important;
+  }
+}
+
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    .EGGS, .RIDDLES { width:67%; }
+    .heading { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+    .EGGS, .RIDDLES { width:100%; }
+    .egg1, .egg2, .egg3, .egg4 {
+      margin-left: 100px;
+    }
+    .egg1 {
+      margin-top: 100px;
+    }
+    .egg2 {
+      margin-top: 400px;
+    }
+    .egg3 {
+      margin-top: 700px;
+    }
+    .egg4 {
+      margin-top: 1000px;
+    }
+    .heading { width:100%; margin:0; border:none; }
+    img{
+      width: 400px;
+      height: 500px;
+      margin-top: 50%;
+      position: relative;
+    }
+    .paratext{
+      position: relative;
+      font-size: 0.8rem;
+      top: 55%;
+      left: 52%;
+      transform: translate(-52%, -150%);
+    }
+}
+
+img { max-width: 100%; height: auto; }
+
+@media (min-device-width:600px) {
+    img[data-src-600px] {
+        content: attr(data-src-600px, url);
+    }
+}
+
+@media (min-device-width:800px) {
+    img[data-src-800px] {
+        content: attr(data-src-800px, url);
+    }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 640px) { body {font-size:1rem;} } 
+@media (min-width:960px) { body {font-size:1.2rem;} } 
+@media (min-width:1100px) { body {font-size:1.5rem;} }
+
+
+ 
+
